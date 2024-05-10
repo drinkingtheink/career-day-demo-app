@@ -1,20 +1,26 @@
 <template>
+  <h1>Cypress Elementary Career Day 2024</h1>
   <img class="banner" src="./assets/cheetah.jpeg">
-  <HelloWorld msg="Cypress Elementary Career Day 2024"/>
   <section class="img-capture">
-    <h2>Drawing with the Mouse</h2>
+    <h2>Draw a Picture</h2>
     <canvas id="myCanvas" width="560" height="360" @mousedown="beginDrawing" @mousemove="keepDrawing" @mouseup="stopDrawing" />
+  </section>
+  <section class="text">
+    <p>
+      Here is a bunch of text so we can see changes.
+    </p>
+    <p>
+      Vestibulum eu pharetra tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam suscipit neque vitae commodo finibus. Phasellus at mollis purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus vel urna vel nunc malesuada volutpat. Proin at tortor gravida, cursus risus in, euismod enim. Phasellus vitae pharetra magna. In vehicula elementum arcu quis consectetur. Donec scelerisque sapien et fringilla efficitur. Proin tempus risus vel libero fringilla, in sagittis arcu molestie. Suspendisse dictum eros condimentum metus mollis, et aliquam nisl fermentum. Pellentesque lacus ligula, aliquam vitae vehicula vel, elementum vel felis. Vivamus hendrerit fringilla arcu, at imperdiet orci eleifend ut.
+    </p>
+    <p>
+      Cras elementum urna tellus, semper lobortis purus placerat in. Aliquam scelerisque sem non mi blandit tristique. Donec molestie, arcu a ornare ultrices, quam elit tempor augue, a porttitor tortor mi varius dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus faucibus consequat neque ac tempus. Donec ut ex ac ex mollis lobortis et ut leo. Duis in odio lobortis, rutrum justo ac, luctus dolor. Nam viverra, diam non venenatis eleifend, mauris purus lobortis mi, vel tempor lectus risus ut neque. Donec at rhoncus justo.
+    </p>  
   </section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data() {
     return {
       x: 0,
@@ -70,8 +76,8 @@ export default {
 
 body {
   /** WAVES */
-  /* background-color: #2e2e2f;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23f2e127' fill-opacity='0.74' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E"); */
+  background-color: #2e2e2f;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23f2e127' fill-opacity='0.74' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
 
   /** BURGS */
   /* background-color: #2e2e2f;
@@ -95,6 +101,16 @@ body {
 .banner {
   border-radius: 50%;
   max-width: 700px;
+  margin: 0 auto;
+}
+
+canvas {
+  border: 5px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.text {
+  max-width: 800px;
   margin: 0 auto;
 }
 </style>
